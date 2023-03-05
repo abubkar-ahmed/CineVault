@@ -1,0 +1,81 @@
+.search{
+    height: 50px;
+    display: flex;
+    gap: 1.5rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:2rem ;
+    min-width: 85vw;
+    input{
+        width: calc(100% - 30px - 1.5rem);
+        height: 100%;
+        background-color: transparent ;
+        border: none;
+        border-bottom: 1px solid transparent;
+        caret-color : $color-2 ;
+        outline: none;
+        font-size: 20px;
+        color: white ;
+        &:focus{
+            border-color: $color-3;
+        }
+    }
+}
+
+.result{
+    min-width: calc(85vw);
+    &.recomended-list{
+        width: 100%;
+        justify-content: start;
+        gap: 2rem;
+    }
+    .recommended-card{
+        min-width: 277px;
+        max-width: 280px;
+    }
+}
+
+@include tablets {
+    .result{
+        // min-width: calc(85vw);
+        // min-width: fit-content;
+        // background-color: red;
+        // margin: auto;
+        &.recomended-list{
+            // width: 100%;
+            // justify-content: flex-start;
+            // padding: auto;
+            // gap: 0rem;
+            // background-color: ;
+            width: fit-content;
+            // background-color: red;
+            min-width: unset;
+        }
+        .recommended-card{
+            min-width: 277px;
+            max-width: 280px;
+            // margin-right: 2rem;
+        }
+    }
+}
+
+@include mobile{
+    .search{
+        input{
+            &::placeholder{
+                font-size: 14px;
+            }
+        }
+
+    }
+    .main-header.result-header{
+        font-size: 1.2rem;
+    }
+
+    .result{
+        &.recomended-list{
+            justify-content: center;
+        }
+    }
+}

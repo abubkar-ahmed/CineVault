@@ -1,0 +1,219 @@
+.details{
+    width: 100%;
+    height: 100%;
+    min-width: 85vw;
+    min-height: 83vh;
+    .details-container{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+        .backGround-img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.28;
+            border-radius: 0.5rem;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            .add-to-bookmarks{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+                svg{
+                    width: 30px;
+                    height: 30px;
+                }
+                path{
+                    fill: white;
+                }
+                &:hover{
+                    path{
+                        fill: $color-2;
+                    }
+                }
+                &.active{
+                    path{
+                        fill: $color-2;
+                    }
+                }
+
+            }
+            h2{
+                color: white;
+                font-size: 25px;
+                text-transform: capitalize;
+                margin-bottom: 2rem;
+                img{
+                    margin-left: 0.5rem;
+                }
+            }
+            .first-details{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                max-width: 668px;
+                margin-bottom: 2rem;
+                li{
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0.5rem;
+                    font-weight: 700;
+                    img{
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+            }
+            .genres{
+                color: white;
+                font-size: 18px;
+                display: flex;
+                gap: 0.5rem;
+                font-weight: 700;
+                margin-bottom: 2rem;
+                span{
+                    color: $color-2;
+                }
+            }
+            .overview{
+                color: white;
+                font-weight: 700;
+                font-size: 18px;
+                margin-bottom: 2rem;
+            }
+            .seasons-controls{
+                display: flex;
+                flex-wrap: wrap;
+                column-gap: 2rem;
+                row-gap: 0.5rem;
+                width: fit-content;
+                margin-bottom: 1rem;
+                li{
+                    color: white;
+                    font-weight: 700;
+                    padding-bottom: 0.2rem;
+                    cursor: pointer;
+                    border-bottom: 1px solid transparent;
+                    &:hover{
+                        border-color: white;
+                    }
+                    &.active{
+                        border-color: white;
+                    }
+                }
+            }
+            .season-info{
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                margin-bottom: 2rem;
+                li{
+                    color: white;
+                    font-weight: 700;
+                    display: flex;
+                    gap: 0.5rem;
+                    align-items: center;
+                    text-transform: capitalize;
+                    img{
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+            }
+            .cast{
+                display: flex;
+                width: 100%;
+                flex-wrap: wrap;
+                justify-content: start;
+                gap: 0.5rem;
+                // display: none;
+                h3{
+                    width: 100%;
+                    font-size: 18px;
+                    color: white;
+                    font-weight: 700;
+                }
+                li{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    max-width: 200px;
+                    // margin-left: 1rem;
+                    margin-top: 1rem;
+                    img{
+                        width: 200px;
+                        object-fit: contain;
+                        border-radius: 0.5rem;
+                    }
+                    h4{
+                        color: white;
+                        font-weight: 700;
+                        font-size: 18px;
+                        margin: auto;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+
+@include mobile{
+    .details{
+        .details-container{
+            padding: 1rem 0.4rem;
+            .content-wrapper {
+                .add-to-bookmarks{
+                    width: 23px;
+                    height: 23px;
+                    svg{
+                        width: 23px;
+                        height: 23px;
+                    }   
+                }
+                h2{
+                    max-width: calc(100% - 40px);
+                    font-size: 20px;
+                }
+                .first-details{
+                    flex-direction: column;
+                    align-items: start;
+                    gap: 0.5rem;
+                }
+                .genres{
+                    font-size: 16px;
+                    display: block;
+                    span{
+                        margin-right: 0.25rem;
+                    }
+                }
+                .overview{
+                    font-size: 16px;
+                }
+                .cast{
+                    justify-content: center;
+                    column-gap: 2rem;
+                }
+            }
+    
+        }
+    
+    }
+}
