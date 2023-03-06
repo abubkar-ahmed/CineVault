@@ -8,8 +8,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    main{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 400px;
+    }
     .auth-container{
-        width: 400px;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -71,12 +78,9 @@
             p{
                 color: white;
                 font-weight: 600;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 0.5rem;
                 a{
                     color: $color-2;
+                    margin-left: 0.35rem;
                 }
             }
             .avatar{
@@ -106,6 +110,22 @@
                         color: $color-2;
                     }
 
+                }
+            }
+        }
+    }
+}
+
+@include mobile{
+    .auth{
+        main{
+            .auth-container{
+                padding: 2rem 0;
+                form{
+                    border-radius: 0;
+                    padding: 2rem 1rem;
+                    border-top: 1px solid $color-2;
+                    border-bottom: 1px solid $color-2;
                 }
             }
         }
