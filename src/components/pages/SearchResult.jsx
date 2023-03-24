@@ -114,7 +114,7 @@ function SearchResult() {
                             Movie
                           </span>
                         )}
-                        <span>{e.date}</span>
+                        <span>{e.lan}</span>
                       </div>
                       <h3>
                         {e.title}
